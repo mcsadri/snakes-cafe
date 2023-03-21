@@ -2,6 +2,9 @@
 
 ## Project: snakes-cafe
 
+Snakes Cafe is a command line utility which will mimic the functionality of a point of sale restaurant system using 
+basic Python tools and understanding of the basics of the language.
+
 ### Author: Manuch Sadri
 
 ### Links and Resources
