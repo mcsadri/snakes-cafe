@@ -76,18 +76,19 @@ order = {
     "Unicorn Tears": 0
 }
 
-order_completed = False
+open_order = True
 
 def main():
     """
     doodah
     """
     print(menu)
-    while order_completed == False:
+    while open_order:
         ordered_item = input ("> ")
         ordered_item = ordered_item.title()
         if ordered_item in order:
-            print(ordered_item)
+            order[ordered_item] += 1
+            print(f"** {order[ordered_item]} order of {ordered_item} have been added to your meal **")
         else:
             print("that's not a valid option")
         print(prompt)
