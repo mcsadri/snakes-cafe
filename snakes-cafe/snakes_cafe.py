@@ -84,16 +84,13 @@ def main():
     """
     print(menu)
     while order_completed == False:
-
         ordered_item = input ("> ")
+        ordered_item = ordered_item.title()
         if ordered_item in order:
-            order.update({order: sum()})
             print(ordered_item)
         else:
             print("that's not a valid option")
         print(prompt)
-
-
 
 main()
 
