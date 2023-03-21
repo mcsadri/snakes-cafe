@@ -60,6 +60,7 @@ prompt = """
 ** What else would you like to order? **
 ****************************************"""
 
+open_order = True
 order = {
     "Wings": 0,
     "Cookies": 0,
@@ -76,11 +77,9 @@ order = {
     "Unicorn Tears": 0
 }
 
-open_order = True
-
 def main():
     """
-    doodah
+    :return: no return
     """
     print(menu)
     while open_order:
@@ -88,10 +87,17 @@ def main():
         ordered_item = ordered_item.title()
         if ordered_item in order:
             order[ordered_item] += 1
-            print(f"** {order[ordered_item]} order of {ordered_item} have been added to your meal **")
+            for item in order:
+                if order[item] > 0:
+                    print(f"** {order[item]} order of {item} have been added to your meal **")
+            print(prompt)
+        elif ordered_item.lower() == "menu":
+            print(menu)
+        elif ordered_item.lower() == "quit":
+            break
         else:
             print("that's not a valid option")
-        print(prompt)
+            print(prompt)
 
 main()
 
